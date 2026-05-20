@@ -13,7 +13,7 @@ Counts2 = Counts(cMax:end);
 Xh2 = Xh(cMax:end);
     % Find threshold
 tic;TPoint = TPointMethod(Counts2,Xh2,1),toc
-tic;TPoint = TPointMethod(Counts2,Xh2,2),toc
+tic;TPoint = TPointThreshold(Counts2,Xh2,2),toc
 figure; plot(Xh,Counts), hold on, plot([Xh2(TPoint) Xh2(TPoint)],[0 max(Counts)],'r')
 figure; 
     subplot(1,3,1), imshow(Im,[]), title('Initiale image')
